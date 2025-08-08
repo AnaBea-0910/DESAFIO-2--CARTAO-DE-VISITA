@@ -1,0 +1,123 @@
+/* Reset e estrutura básica */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e6ccff, #f3e5f5);
+  padding: 20px;
+}
+
+/* Contêiner do cartão */
+.card-container {
+  width: 100%;
+  max-width: 450px;
+  padding: 10px;
+}
+
+/* Cartão de perfil */
+.profile-card {
+  background-color: #fff;
+  border-radius: 20px;
+  border: 2px solid #d1b3ff;
+  box-shadow: 0 12px 30px rgba(137, 84, 173, 0.2);
+  padding: 35px 30px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+.profile-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Cabeçalho: Imagem e nome */
+.profile-card header {
+  margin-bottom: 20px;
+}
+#profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #ba68c8;
+  transition: transform 0.3s ease;
+}
+#profile-photo:hover {
+  transform: scale(1.08);
+}
+#profile-name {
+  color: #6a1b9a;
+  font-size: 2.2em;
+  margin-top: 10px;
+}
+
+/* Biografia e detalhes */
+#profile-bio {
+  color: #555;
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+.details-section {
+  background-color: #f3e5f5;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 25px;
+}
+.details-section p {
+  color: #7b1fa2;
+  margin: 6px 0;
+  font-weight: 500;
+}
+
+/* Botão interativo */
+#toggle-button {
+  background-color: #ab47bc;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+#toggle-button:hover {
+  background-color: #8e24aa;
+  transform: translateY(-2px);
+}
+#toggle-button:active {
+  background-color: #6a1b9a;
+  transform: translateY(0);
+}
+
+/* Detalhes extras */
+#extra-details {
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid #ddd;
+  color: #444;
+}
+#extra-details span {
+  color: #4a148c;
+}
+.hidden {
+  display: none;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .profile-card {
+    padding: 25px 20px;
+  }
+  #profile-name {
+    font-size: 1.9em;
+  }
+  #profile-bio {
+    font-size: 1em;
+  }
+}
